@@ -35,12 +35,6 @@ int _printf(const char *format, ...)
 					_putchar(str(va_arg(print, char *)));
 					count = count + 1;
 				}
-				else if (format[i + 1] == 'r')
-				{
-					_putchar(format[i]);
-					_putchar(format[i + 1]);
-					count = count + 1;
-				}
 				else
 				{
 					_putchar(format[i + 1]);
