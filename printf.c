@@ -7,6 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
+	char c, *s;
 	int count = 0;
 	va_list print;
 
@@ -24,8 +25,8 @@ int _printf(const char *format, ...)
 					count++;
 					break;
 				case 's':
-					s = va_arg(print, char*);
-					_putchar(s);
+					*s = va_arg(print, char*);
+					_putchar(*s);
 					count++;
 					break;
 				case '%':
