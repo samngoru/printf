@@ -1,49 +1,46 @@
 #include <stdarg.h>
 #include "main.h"
 /**
- * _printf - print output
- * @format: variable to be manipulated
- * Return: count
+ * _printf - printing function
+ * @format: variable
+ * Return:count
  */
 int _printf(const char *format, ...)
 {
-	int i;
-	int count;
+	int i = 0, count = 0;
 	va_list print;
 
-	i = 0;
-	count = 0;
 	va_start(print, format);
-	while (format[i] != '\0')
+	while (*format)
 	{
-		if (format[i] != '%')
+		if (*format == '%')
 		{
-			_putchar(format[i]);
-			count = count + 1;
+			format++;
+			switch (*format)
+			{
+				case 'c':
+					_putchar(va_arg(print, int));
+					count++;
+					break;
+				case 's':
+					_putchar(str(va_arg(print, char*)));
+					count++;
+					break;
+				case '%':
+					_putchar('%');
+					count++;
+					break;
+				default:
+					_putchar(*format);
+					break;
+			}
 		}
 		else
 		{
-			while (format[i] == '%')
-			{
-				if (format[i + 1] == 'c')
-				{
-					_putchar(va_arg(print, int));
-					count = count + 1;
-				}
-				else if (format[i + 1] == 's')
-				{
-					_putchar(str(va_arg(print, char *)));
-					count = count + 1;
-				}
-				else
-				{
-					_putchar(format[i + 1]);
-					count = count + 1;
-				}
-				i++;
-			}
+			_putchar(*format);
+			count++;
 		}
-		i++;
+		format++;
 	}
 	va_end(print);
 	return (count);
