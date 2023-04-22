@@ -4,9 +4,11 @@
 #include <limits.h>
 int main(void)
 {
-	_printf("character:[%c, %c]\n", 'C', 'I');
+	_printf("character:[%c, %s]\n", 'C', "String");
 	_printf("Character:[%c]\n", 'H');
-	printf("\n");
+	_printf("%%\n");
+	_printf("Percent:[%%]\n");
+	_printf("Unknown:[%r]\n");
 	_printf("String:[%s]\n", "I am a string !");
 	printf("\n");
     return (0);
