@@ -29,10 +29,6 @@ int _printf(const char *format, ...)
 						_putchar(str(va_arg(print, char*)));
 						count = count + 1;
 						break;
-					case '%':
-						_putchar('%');
-						count = count + 1;
-						break;
 					default:
 						_putchar(format[i]);
 						count = count + 1;
