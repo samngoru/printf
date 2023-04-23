@@ -14,8 +14,10 @@ typedef struct printi
 	char c;
 	char *s;
 } printi;
-
 int _putchar(char c);
 int _printf(const char *format, ...);
+int print_c(va_list args);
+int print_s(va_list args);
+int print_percent(va_list args);
 int str(char *s);
 #endif
