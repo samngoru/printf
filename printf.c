@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 						count += print_string(print);
 						break;
 					case '%':
-						count += print_percent(print);
+						count += _putchar(format[i]);
 						break;
 				}
 			}

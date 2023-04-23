@@ -34,19 +34,3 @@ int print_string(va_list print)
 	}
 	return (count);
 }
-/**
- * print_percent - prints %
- * @print: argument
- * Return: number of arguments
- */
-int print_percent(va_list print)
-{
-	int str;
-	
-	str = '%';
-	if (va_arg(print, int) == str)
-	{
-		return (str);
-	}
-	return (str);
-}
