@@ -28,9 +28,8 @@ int _printf(const char *format, ...)
 					case 's':
 						count += print_string(print);
 						break;
-					default:
-						_putchar(format[i]);
-						count = count + 1;
+					case '%':
+						count += print_percent(print);
 						break;
 				}
 			}
