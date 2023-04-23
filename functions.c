@@ -41,12 +41,12 @@ int print_string(va_list print)
  */
 int print_percent(va_list print)
 {
-	char str;
-
-	str = '%'
-	str = va_arg(print, *str);
+	int str;
+	
+	str = '%';
 	if (va_arg(print, int) == str)
 	{
 		return (str);
 	}
+	return (str);
 }
