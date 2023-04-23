@@ -26,7 +26,7 @@ int print_string(va_list print)
 	str = va_arg(print, char*);
 	if (str == NULL)
 	{
-		return (-1);
+		str = "(null)";
 	}
 	else
 	{
