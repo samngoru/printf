@@ -3,7 +3,7 @@
 
 /**
  * print_char - prints character
- * @args: argument
+ * @print: argument
  * Return: number of arguments
  */
 int print_char(va_list print)
@@ -15,7 +15,7 @@ int print_char(va_list print)
 }
 /**
  * print_string - prints string
- * @args: argument
+ * @print: argument
  * Return: number of arguments
  */
 int print_string(va_list print)
