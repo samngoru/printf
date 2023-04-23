@@ -4,6 +4,7 @@
 #include <limits.h>
 int main(void)
 {
+	_printf("Lets try ti print a simple statemet\n");
 	_printf("character:[%c, %s]\n", 'C', "String");
 	_printf("Character:[%c]\n", 'H');
 	_printf("%%\n");

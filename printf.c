@@ -7,7 +7,12 @@
  */
 int _printf(const char *format, ...)
 {
+<<<<<<< HEAD
 	int i = 0, count = 0;
+=======
+	char c, *s;
+	int count = 0;
+>>>>>>> 6e26bf2ee9f27de57dca5fc4ccb125b98ceacaef
 	va_list print;
 
 	va_start(print, format);
@@ -19,12 +24,23 @@ int _printf(const char *format, ...)
 			switch (format[i])
 			{
 				case 'c':
+<<<<<<< HEAD
 					_putchar(va_arg(print, int));
 					count = count + 1;
 					break;
 				case 's':
 					_putchar(str(va_arg(print, char*)));
 					count = count + 1;
+=======
+					c = va_arg(print, int);
+					_putchar(c);
+					count++;
+					break;
+				case 's':
+					*s = va_arg(print, char*);
+					_putchar(*s);
+					count++;
+>>>>>>> 6e26bf2ee9f27de57dca5fc4ccb125b98ceacaef
 					break;
 				case '%':
 					_putchar('%');
