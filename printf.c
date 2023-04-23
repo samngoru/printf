@@ -1,6 +1,7 @@
 #include <stdarg.h>
 #include "main.h"
 #include <stddef.h>
+#include <stdlib.h>
 /**
  * _printf - printing function
  * @format: variable
@@ -47,5 +48,5 @@ int _printf(const char *format, ...)
 		va_end(print);
 		return (count);
 	}
-	return (-1);
+	exit(1);
 }
