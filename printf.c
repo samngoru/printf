@@ -32,7 +32,9 @@ int _printf(const char *format, ...)
 						count += _putchar(format[i]);
 						break;
 					default:
-						count += _putchar(format[i]);
+						_putchar('%');
+						_putchar(format[i]);
+						count += 2;
 						break;
 				}
 			}
