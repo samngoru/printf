@@ -31,12 +31,14 @@ int _printf(const char *format, ...)
 					case '%':
 						count += _putchar(format[i]);
 						break;
+					default:
+						count += _putchar(format[i]);
+						break;
 				}
 			}
 			else
 			{
-				_putchar(format[i]);
-				count = count + 1;
+				count += _putchar(format[i]);
 			}
 			format++;
 		}
