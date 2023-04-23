@@ -25,12 +25,17 @@ int print_string(va_list print)
 
 	str = va_arg(print, char*);
 	if (str == NULL)
-		str = "(null)";
-	while (str[i] != '\0')
 	{
-		_putchar(str[i]);
-		i++;
-		count++;
+		return (-1);
+	}
+	else
+	{
+		while (str[i] != '\0')
+		{
+			_putchar(str[i]);
+			i++;
+			count++;
+		}
 	}
 	return (count);
 }
