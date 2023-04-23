@@ -8,12 +8,13 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, count = 0;
-	va_list print;
-
-	va_start(print, format);
 	if (format != NULL)
 	{
+		int i = 0, count = 0;
+		va_list print;
+
+		va_start(print, format);
+
 		while (format[i] != '\0')
 		{
 			if (format[i] == '%')
