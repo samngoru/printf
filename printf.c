@@ -23,16 +23,14 @@ int _printf(const char *format, ...)
 				switch (format[i])
 				{
 					case 'c':
-						_putchar(va_arg(print, int));
-						count = count + 1;
+						count += print_char(print);
 						break;
 					case 's':
-						_putchar(str(va_arg(print, char*)));
-						count = count + 1;
+						count += print_string(print);
 						break;
 					default:
-						_putchar(format[i]);
-						count = count + 1;
+						_putchar('%');
+						count++;
 						break;
 				}
 			}

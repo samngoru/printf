@@ -1,5 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdarg.h>
+#include <stddef.h>
 /**
  * struct print - prints structure that holds identidiers
  *
@@ -9,15 +11,9 @@
  * Description: will be used to charck for identifiers
  */
 
-typedef struct printi
-{
-	char c;
-	char *s;
-} printi;
 int _putchar(char c);
 int _printf(const char *format, ...);
-int print_c(va_list args);
-int print_s(va_list args);
-int print_percent(va_list args);
+int print_char(va_list print);
+int print_string(va_list print);
 int str(char *s);
 #endif
