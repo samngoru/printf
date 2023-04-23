@@ -7,38 +7,38 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0;
+	int i = 0, count = 0;
 	va_list print;
 
 	va_start(print, format);
-	while (*format)
+	while (format[i] != '\0')
 	{
-		if (*format == '%')
+		if (format[i] == '%')
 		{
 			format++;
-			switch (*format)
+			switch (format[i])
 			{
 				case 'c':
 					_putchar(va_arg(print, int));
-					count++;
+					count = count + 1;
 					break;
 				case 's':
 					_putchar(str(va_arg(print, char*)));
-					count++;
+					count = count + 1;
 					break;
 				case '%':
 					_putchar('%');
-					count++;
+					count = count + 1;
 					break;
 				default:
-					_putchar(*format);
+					_putchar(format[i]);
 					break;
 			}
 		}
 		else
 		{
-			_putchar(*format);
-			count++;
+			_putchar(format[i]);
+			count = count + 1;
 		}
 		format++;
 	}
