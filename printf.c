@@ -25,12 +25,12 @@ int _printf(const char *format, ...)
 		{
 			while (format[i] == '%')
 			{
-				if (format[i + 1] == p->c)
+				if (format[i + 1] == 'c')
 				{
 					_putchar(va_arg(print, int));
 					count = count + 1;
 				}
-				else if (format[i + 1] == *p->s)
+				else if (format[i + 1] == 's')
 				{
 					_putchar(str(va_arg(print, char *)));
 					count = count + 1;
