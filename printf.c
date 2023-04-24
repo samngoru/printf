@@ -4,7 +4,7 @@
 #include <stdlib.h>
 /**
  * _printf - printing function
- * @format: variable
+ * @format: variable to be manipulated
  * Return:count
  */
 int _printf(const char *format, ...)
