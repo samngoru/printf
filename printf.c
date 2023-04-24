@@ -1,7 +1,6 @@
 #include <stdarg.h>
 #include "main.h"
 #include <stddef.h>
-#include <stdlib.h>
 /**
  * _printf - printing function
  * @format: variable
@@ -15,7 +14,7 @@ int _printf(const char *format, ...)
 	va_start(print, format);
 	if (format == NULL)
 		return (-1);
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format != NULL)
 	{
 		if (format[i] == '%')
 		{
