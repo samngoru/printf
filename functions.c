@@ -2,7 +2,7 @@
 #include <stdarg.h>
 /**
  * print_char - prints character
- * @print: argument
+ * @print: argument to be manipulated
  * Return: number of arguments
  */
 int print_char(va_list print)
