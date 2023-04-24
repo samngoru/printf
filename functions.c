@@ -7,10 +7,7 @@
  */
 int print_char(va_list print)
 {
-	int c;
-
-	c = va_arg(print, int);
-	return (_putchar(c));
+	return (_putchar(va_arg(print, int)));
 }
 /**
  * print_string - prints string
