@@ -6,7 +6,7 @@
  * print_char - prints character
  * @print: argument to be manipulated
  * Return: number of arguments
- er*/
+ */
 int print_char(va_list print)
 {
 	return (_putchar(va_arg(print, int)));
