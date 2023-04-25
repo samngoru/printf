@@ -32,6 +32,10 @@ int _printf(const char *format, ...)
 					case '%':
 						count += _putchar(format[i]);
 						break;
+					case 'i':
+					case 'd':
+						count += print_d(print);
+						break;
 					default:
 						_putchar('%');
 						_putchar(format[i]);
