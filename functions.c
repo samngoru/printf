@@ -40,30 +40,30 @@ int print_string(va_list print)
 int print_d(va_list print)
 {
 
-	unsigned int absolute, aux, countnum, count;
+	unsigned int abs, a, num, count;
 	int n;
 
 	count = 0;
 	n = va_arg(print, int);
 		if (n < 0)
 		{
-			absolute = (n * -1);
+			abs = (n * -1);
 			count += _putchar('-');
 		}
 		else
-			absolute = n;
+			abs = n;
 
-	aux = absolute;
-	countnum = 1;
-	while (aux > 9)
+	a = abs;
+	num = 1;
+	while (a > 9)
 	{
-		aux /= 10;
-		countnum *= 10;
+		a /= 10;
+		num *= 10;
 	}
-	while (countnum >= 1)
+	while (num >= 1)
 	{
-		count += _putchar((((absolute / countnum)) % 10) + '0');
-		countnum /= 10;
+		count += _putchar((((abs / num)) % 10) + '0');
+		num /= 10;
 	}
 	return (count);
 }
